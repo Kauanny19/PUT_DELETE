@@ -55,7 +55,7 @@ module.exports = class organizerController {
 
   static async deleteOrganizer(req, res) {
     // Obtém o parâmetro 'id' da requisição, que é o id do organizador a ser deletado
-    const organizerId = parseInt(req.params.id)
+    const organizerId = parseInt(req.params.id);
     
     const organizerIndex = organizers.findIndex(organizer => organizer.id === organizerId);
 
@@ -67,6 +67,6 @@ module.exports = class organizerController {
     // Removendo o organizador do Array 'organizers'
     organizers.splice(organizerIndex,1);
 
-    return res.status(200).json({message: "Organizador apagado"})
+    return res.status(200).json({message: "Organizador apagado"});
   }
 };
